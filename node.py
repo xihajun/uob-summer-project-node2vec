@@ -25,8 +25,7 @@ cmds_list = [['python', './src/main.py','--input',input_filename, '--output', ou
 for i in range(len(cmds_list)):
     try:
         subprocess.run(cmds_list[i])
-        temp = cmds_list[i].split(' ')
-        subprocess.run(["rm",temp[3]])
+        subprocess.run(["rm",cmds_list[i][3]])
     except:
         print("fail")
         
