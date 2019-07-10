@@ -20,7 +20,7 @@ file_name = [[f_list[i],output_filename[i]] for i in range(len(f_list))]
 node2vec_input_dir = '.' + "/node2vec_output/"
 os.makedirs(node2vec_input_dir, exist_ok=True)
 
-cmds_list = [['python', '../node2vec/src/main.py','--input',input_filename, '--output', output_filename] for input_filename, output_filename in file_name]
+cmds_list = [['python', './src/main.py','--input',input_filename, '--output', output_filename] for input_filename, output_filename in file_name]
 
 for i in range(len(cmds_list)):
     try:
